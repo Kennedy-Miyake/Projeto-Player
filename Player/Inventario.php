@@ -9,4 +9,7 @@ class Inventario {
     public function __construct() {
         $this->atualizarCapacidade(); 
     }
+    public function atualizarCapacidade(int $nivel): void {
+        $this->capacidadeMaxima = 20 + ($this->nivel * 3);
+    }
 }
