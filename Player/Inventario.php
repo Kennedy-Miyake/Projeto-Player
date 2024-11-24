@@ -36,4 +36,11 @@ class Inventario {
         }
         echo "Item ( {$nome} ) não encontrado no inventário.<br>";
     }
+    private function calcPesoAtual(): float {
+        $pesoTotal = 0;
+        foreach ($this->itens as $item) {
+            $pesoTotal += $item->getPeso(); 
+        }
+        return $pesoTotal; 
+    }
 }
