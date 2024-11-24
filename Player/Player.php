@@ -15,6 +15,12 @@ class Player {
     public function setNivel(int $nivel): void {
         $this->nivel = $nivel;
     }
+    public function getNickname(): string {
+        return $this->nickname;
+    }
+    public function getNivel(): int {
+        return $this->nivel;
+    }
 }
 
 ?>
