@@ -9,6 +9,7 @@ class Inventario {
     public function __construct() {
         $this->atualizarCapacidade(); 
     }
+    //Função não terminado por falta do arquivo 'Item.php'
     public function atualizarCapacidade(int $nivel): void {
         $this->capacidadeMaxima = 20 + ($this->nivel * 3);
     }
@@ -23,5 +24,16 @@ class Inventario {
         } else {
             echo "<li>O item ( {$itens->getNome()} ) ultrapassou o limite máximo </li>";
         }
+    }
+    public function remover(string $nome): void {
+        foreach ($this->itens as $indice => $item) {
+            if ($item->getNome() === $nome) { 
+                unset($this->itens[$indice]);
+                $this->itens = array_values($this->itens); 
+                echo "Item ( {$nome} ) foi removido com sucesso.<br>";
+                return; 
+            }
+        }
+        echo "Item ( {$nome} ) não encontrado no inventário.<br>";
     }
 }
