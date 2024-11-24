@@ -12,4 +12,7 @@ class Inventario {
     public function atualizarCapacidade(int $nivel): void {
         $this->capacidadeMaxima = 20 + ($this->nivel * 3);
     }
+    public function getCapacidadeMaxima(): float {
+        return $this->capacidadeMaxima;
+    }
 }
