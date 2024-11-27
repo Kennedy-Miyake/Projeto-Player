@@ -9,10 +9,7 @@ class Inventario {
     public function __construct() {
         $this->capacidadeMaxima = 20;
     }
-    //Função não terminado por falta do arquivo 'Item.php'
-    public function atualizarCapacidade(int $nivel): void {
-        $this->capacidadeMaxima = 20 + ($nivel * 3);
-    }
+
     public function getCapacidadeMaxima(): float {
         return $this->capacidadeMaxima;
     }
@@ -35,6 +32,9 @@ class Inventario {
             }
         }
         echo "Item ( {$nome} ) não encontrado no inventário.<br>";
+    }
+    public function atualizarCapacidade(int $nivel): void {
+        $this->capacidadeMaxima = 20 + ($nivel * 3);
     }
     private function calcPesoAtual(): float {
         $pesoTotal = 0;
