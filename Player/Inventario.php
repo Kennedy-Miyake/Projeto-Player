@@ -7,24 +7,13 @@ class Inventario {
     private float $capacidadeMaxima;
 
     public function __construct() {
-        $this->atualizarCapacidade(); 
+        $this->capacidadeMaxima = 20;
     }
-    //Função não terminado por falta do arquivo 'Item.php'
-    public function atualizarCapacidade(int $nivel): void {
-        $this->capacidadeMaxima = 20 + ($this->nivel * 3);
-    }
+
     public function getCapacidadeMaxima(): float {
         return $this->capacidadeMaxima;
     }
-    public function adicionar(Item $itens): void {
-        $pesoAtual = $this->calcPesoAtual(); 
-        if ($pesoAtual + $itens->getPeso() <= $this->capacidadeMaxima) { 
-            array_push($this->itens, $itens); 
-            echo "<li>O item ( {$itens->getNome()} ) foi adicionado com sucesso </li>";
-        } else {
-            echo "<li>O item ( {$itens->getNome()} ) ultrapassou o limite máximo </li>";
-        }
-    }
+    public function adicionar(Item $itens): void {}
     public function remover(string $nome): void {
         foreach ($this->itens as $indice => $item) {
             if ($item->getNome() === $nome) { 
@@ -36,11 +25,7 @@ class Inventario {
         }
         echo "Item ( {$nome} ) não encontrado no inventário.<br>";
     }
-    private function calcPesoAtual(): float {
-        $pesoTotal = 0;
-        foreach ($this->itens as $item) {
-            $pesoTotal += $item->getPeso(); 
-        }
-        return $pesoTotal; 
+    public function atualizarCapacidade(int $nivel): void {
+        $this->capacidadeMaxima = 20 + ($nivel * 3);
     }
 }

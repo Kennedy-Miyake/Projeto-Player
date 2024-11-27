@@ -1,21 +1,21 @@
 <?php
 
 class Item {
-    private string $name;
+    private string $nome;
     private int $tamanho;
     private string $classe;
 
-    public function __construct(string $name, int $tamanho, string $classe) {
-        $this->getName($name);
+    public function __construct(string $nome, int $tamanho, string $classe) {
+        $this->getNome($nome);
         $this->getTamanho($tamanho);
         $this->getclasse($classe);
     }
 
-    public function getName(): string {
-        return $this->name;
+    public function getNome(): string {
+        return $this->nome;
     }
-    public function  setName(string $name): void {
-        $this->name = $name;
+    public function setNome(string $nome): void {
+        $this->nome = $nome;
     }
     public function getTamanho(): int {
         return $this->tamanho;
