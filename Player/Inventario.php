@@ -36,11 +36,4 @@ class Inventario {
     public function atualizarCapacidade(int $nivel): void {
         $this->capacidadeMaxima = 20 + ($nivel * 3);
     }
-    private function calcPesoAtual(): float {
-        $pesoTotal = 0;
-        foreach ($this->itens as $item) {
-            $pesoTotal += $item->getPeso(); 
-        }
-        return $pesoTotal; 
-    }
 }
