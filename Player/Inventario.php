@@ -7,7 +7,7 @@ class Inventario {
     private float $capacidadeMaxima;
 
     public function __construct() {
-        $this->atualizarCapacidade(); 
+        $this->capacidadeMaxima = 20;
     }
     //Função não terminado por falta do arquivo 'Item.php'
     public function atualizarCapacidade(int $nivel): void {
