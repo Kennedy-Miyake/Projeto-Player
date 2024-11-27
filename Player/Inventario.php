@@ -13,15 +13,7 @@ class Inventario {
     public function getCapacidadeMaxima(): float {
         return $this->capacidadeMaxima;
     }
-    public function adicionar(Item $itens): void {
-        $pesoAtual = $this->calcPesoAtual(); 
-        if ($pesoAtual + $itens->getPeso() <= $this->capacidadeMaxima) { 
-            array_push($this->itens, $itens); 
-            echo "<li>O item ( {$itens->getNome()} ) foi adicionado com sucesso </li>";
-        } else {
-            echo "<li>O item ( {$itens->getNome()} ) ultrapassou o limite máximo </li>";
-        }
-    }
+    public function adicionar(Item $itens): void {}
     public function remover(string $nome): void {
         foreach ($this->itens as $indice => $item) {
             if ($item->getNome() === $nome) { 
