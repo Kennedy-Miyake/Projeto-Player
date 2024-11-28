@@ -26,14 +26,15 @@ class Player {
     public function subirNivel(): void {
         $this->nivel++;
         $this->inventario->atualizarCapacidade($this->nivel);
+        echo "Parabéns, {$this->nickname}! Você subiu para o nível {$this->nivel}. Sua capacidade de inventário agora é {$this->inventario->getCapacidadeMaxima()}.<br>";
     }
     public function getInventario(): Inventario {
         return $this->inventario;
     }
-    public function adicionarItem(Item $item): void {
+    public function coletarItem(Item $item): void {
         $this->inventario->adicionar($item);
     }
-    public function removerItem(string $nome): void {
+    public function soltarItem(string $nome): void {
         $this->inventario->remover($nome);
     }
 }
