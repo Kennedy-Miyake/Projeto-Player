@@ -30,6 +30,12 @@ class Player {
     public function getInventario(): Inventario {
         return $this->inventario;
     }
+    public function adicionarItem(Item $item): void {
+        $this->inventario->adicionar($item);
+    }
+    public function removerItem(string $nome): void {
+        $this->inventario->remover($nome);
+    }
 }
 
 ?>
