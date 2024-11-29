@@ -28,13 +28,13 @@ class Inventario {
     public function atualizarCapacidade(int $nivel): void {
         $this->capacidadeMaxima = 20 + ($nivel * 3);
     }
-    private function calcularTamanhoAtual(): int {
+    public function calcularTamanhoAtual(): int {
         $tamanhoTotal = 0;
         foreach ($this->itens as $item) {
             $tamanhoTotal += $item->getTamanho();
         }
         return $tamanhoTotal;
-    } 
+    }    
 }
 
 ?>
