@@ -13,7 +13,10 @@ class Inventario {
     public function getCapacidadeMaxima(): float {
         return $this->capacidadeMaxima;
     }
-    public function adicionar(Item $itens): void {}
+    public function adicionar(Item $itens): void {
+        array_push($this->itens, $item);
+    }
+    
     
     public function remover(string $nome): void {
         foreach ($this->itens as $indice => $item) {
