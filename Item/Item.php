@@ -6,9 +6,9 @@ class Item {
     private string $classe;
 
     public function __construct(string $nome, int $tamanho, string $classe) {
-        $this->getNome($nome);
-        $this->getTamanho($tamanho);
-        $this->getClasse($classe);
+        $this->setNome($nome);
+        $this->setTamanho($tamanho);
+        $this->setClasse($classe);
     }
 
     public function getNome(): string {
