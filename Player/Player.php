@@ -28,9 +28,6 @@ class Player {
         $this->inventario->atualizarCapacidade($this->nivel);
         echo "Parabéns, {$this->nickname}! Você subiu para o nível {$this->nivel}. Sua capacidade de inventário agora é {$this->inventario->getCapacidadeMaxima()}.<br>";
     }
-    public function getInventario(): Inventario {
-        return $this->inventario;
-    }
     public function coletarItem(Item $item): void {
         $this->inventario->adicionar($item);
     }
