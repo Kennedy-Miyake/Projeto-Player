@@ -14,10 +14,8 @@ class Inventario {
         return $this->capacidadeMaxima;
     }
     public function adicionar(Item $itens): void {
-        array_push($this->itens, $item);
+        array_push($this->itens, $itens);
     }
-    
-    
     public function remover(string $nome): void {
         foreach ($this->itens as $indice => $item) {
             if ($item->getNome() === $nome) { 
@@ -30,7 +28,7 @@ class Inventario {
         echo "Item ( {$nome} ) não encontrado no inventário.<br>";
     }
     public function atualizarCapacidade(int $nivel): void {
-        $this->capacidadeMaxima = 20 + ($nivel * 3);
+        $this->capacidadeMaxima += ($nivel * 3);
     }
     public function calcularTamanhoAtual(): int {
         $tamanhoTotal = 0;
@@ -40,5 +38,4 @@ class Inventario {
         return $tamanhoTotal;
     }    
 }
-
 ?>

@@ -35,5 +35,4 @@ class Player {
         $this->inventario->remover($nome);
     }
 }
-
 ?>
