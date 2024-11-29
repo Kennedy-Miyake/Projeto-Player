@@ -14,7 +14,7 @@ class Inventario {
         return $this->capacidadeMaxima;
     }
     public function adicionar(Item $itens): void {
-        array_push($this->itens, $item);
+        array_push($this->itens, $itens);
     }
     
     
