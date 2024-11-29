@@ -8,7 +8,7 @@ class Item {
     public function __construct(string $nome, int $tamanho, string $classe) {
         $this->getNome($nome);
         $this->getTamanho($tamanho);
-        $this->getclasse($classe);
+        $this->getClasse($classe);
     }
 
     public function getNome(): string {
@@ -29,7 +29,5 @@ class Item {
     public function setClasse(string $classe): void {
         $this->classe = $classe;
     }
-    
- 
 }
 ?>

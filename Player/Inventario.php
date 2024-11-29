@@ -16,8 +16,6 @@ class Inventario {
     public function adicionar(Item $itens): void {
         array_push($this->itens, $itens);
     }
-    
-    
     public function remover(string $nome): void {
         foreach ($this->itens as $indice => $item) {
             if ($item->getNome() === $nome) { 
@@ -40,5 +38,4 @@ class Inventario {
         return $tamanhoTotal;
     }    
 }
-
 ?>
