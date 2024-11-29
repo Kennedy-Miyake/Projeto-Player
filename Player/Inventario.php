@@ -14,6 +14,7 @@ class Inventario {
         return $this->capacidadeMaxima;
     }
     public function adicionar(Item $itens): void {}
+    
     public function remover(string $nome): void {
         foreach ($this->itens as $indice => $item) {
             if ($item->getNome() === $nome) { 
