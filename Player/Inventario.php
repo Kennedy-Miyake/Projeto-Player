@@ -30,7 +30,7 @@ class Inventario {
         echo "Item ( {$nome} ) não encontrado no inventário.<br>";
     }
     public function atualizarCapacidade(int $nivel): void {
-        $this->capacidadeMaxima = 20 + ($nivel * 3);
+        $this->capacidadeMaxima += ($nivel * 3);
     }
     public function calcularTamanhoAtual(): int {
         $tamanhoTotal = 0;
