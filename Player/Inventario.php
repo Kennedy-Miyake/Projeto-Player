@@ -49,5 +49,9 @@ class Inventario {
         }
         return $tamanhoTotal;
     }    
+    
+    public function capacidadeLivre(): void {
+        echo "A capacidade livre do inventário é " . $this->capacidadeMaxima - $this->calcularTamanhoAtual() . " espaços.";
+    }
 }
 ?>
