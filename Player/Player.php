@@ -34,5 +34,8 @@ class Player {
     public function soltarItem(string $nome): void {
         $this->inventario->remover($nome);
     }
+    public function infoCapacidade(): void {
+        $this->inventario->capacidadeLivre();
+    }
 }
 ?>
