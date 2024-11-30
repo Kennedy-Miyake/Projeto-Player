@@ -1,6 +1,6 @@
 <?php
 
-require_once 'Item.php';
+require_once ("../Item/Item.php");
 
 class Defesa extends Item {
     public function __construct(string $name) {
